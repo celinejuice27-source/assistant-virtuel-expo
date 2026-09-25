@@ -1,21 +1,5 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { router, useLocalSearchParams } from 'expo-router';
-import {
-  ArrowClockwise,
-  CaretDown,
-  ClosedCaptioning,
-  Keyboard,
-  Lifebuoy,
-  ListBullets,
-  Microphone,
-  PaperPlaneRight,
-  PencilSimple,
-  SpeakerHigh,
-  SpeakerSlash,
-  Stop,
-  Translate,
-  X,
-} from 'phosphor-react-native';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import {
   KeyboardAvoidingView,
@@ -32,6 +16,22 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { askAgent, HELP_MESSAGE, type Msg } from '@/agent/ai';
 import { getStt, silentDuration, speak, stopSpeaking } from '@/agent/voice';
 import { AgentAvatar, AgentStage, type AgentState } from '@/components/agent';
+import {
+  ArrowClockwise,
+  CaretDown,
+  ClosedCaptioning,
+  Keyboard,
+  Lifebuoy,
+  ListBullets,
+  Microphone,
+  PaperPlaneRight,
+  PencilSimple,
+  SpeakerHigh,
+  SpeakerSlash,
+  Stop,
+  Translate,
+  X,
+} from '@/components/icons';
 import { PulseRing, ThinkingDots, Wave } from '@/components/motion';
 import { Button, Glass, GlassButton, T, Tag } from '@/components/ui';
 import { getLang } from '@/data/langs';

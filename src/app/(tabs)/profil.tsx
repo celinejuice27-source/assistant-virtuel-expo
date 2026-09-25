@@ -1,7 +1,7 @@
 import { router } from 'expo-router';
-import { CaretRight } from 'phosphor-react-native';
 import { Pressable, StyleSheet, View } from 'react-native';
 
+import { CaretRight } from '@/components/icons';
 import { Screen } from '@/components/layout';
 import { Kicker, selectable, T, Toggle } from '@/components/ui';
 import { getLang } from '@/data/langs';

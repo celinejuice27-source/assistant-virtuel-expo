@@ -1,4 +1,5 @@
 import * as Speech from 'expo-speech';
+import { Platform } from 'react-native';
 
 import type { Lang } from '@/data/langs';
 import type { LevelId } from '@/data/levels';
@@ -33,13 +34,16 @@ export function silentDuration(text: string) {
 /**
  * Reconnaissance vocale (expo-speech-recognition). Le module natif n'existe
  * pas dans Expo Go : on le charge paresseusement et on renvoie null s'il
- * manque, l'écran de conversation simule alors l'écoute.
+ * manque, l'écran de conversation simule alors l'écoute. Sur le web (aperçu),
+ * l'écoute est toujours simulée : l'API Web Speech varie selon les navigateurs
+ * et le micro est souvent refusé dans une page intégrée.
  */
 type SttModule = typeof import('expo-speech-recognition');
 let stt: SttModule | null | undefined;
 
 export function getStt(): SttModule | null {
   if (stt !== undefined) return stt;
+  if (Platform.OS === 'web') return (stt = null);
   try {
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     const mod = require('expo-speech-recognition') as SttModule;

@@ -1,7 +1,7 @@
 import { router } from 'expo-router';
-import { CheckCircle, PlusCircle } from 'phosphor-react-native';
 import { StyleSheet, View } from 'react-native';
 
+import { CheckCircle, PlusCircle } from '@/components/icons';
 import { Screen } from '@/components/layout';
 import { Button, Kicker, SectionTitle, T } from '@/components/ui';
 import { getLang } from '@/data/langs';

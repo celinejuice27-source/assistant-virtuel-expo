@@ -1,4 +1,3 @@
-import type { Icon } from 'phosphor-react-native';
 import { useEffect, useState, type ReactNode } from 'react';
 import {
   Animated,
@@ -15,6 +14,7 @@ import {
 } from 'react-native';
 import { BlurView } from 'expo-blur';
 
+import type { Icon } from '@/components/icons';
 import { alpha, colors, fonts, radii, shadows } from '@/theme/tokens';
 
 /* ---------- Texte ---------- */

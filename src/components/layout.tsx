@@ -1,10 +1,10 @@
 import { router } from 'expo-router';
-import { ArrowLeft } from 'phosphor-react-native';
 import type { ReactNode } from 'react';
 import { Pressable, ScrollView, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { Circle } from 'react-native-svg';
 
+import { ArrowLeft } from '@/components/icons';
 import { colors, space } from '@/theme/tokens';
 
 /** Page défilante avec pied fixe optionnel (CTA). */

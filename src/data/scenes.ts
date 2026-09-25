@@ -7,7 +7,7 @@ import {
   FirstAid,
   ForkKnife,
   type Icon,
-} from 'phosphor-react-native';
+} from '@/components/icons';
 
 export type SceneId = 'libre' | 'cafe' | 'aeroport' | 'hotel' | 'resto' | 'medecin' | 'entretien';
 

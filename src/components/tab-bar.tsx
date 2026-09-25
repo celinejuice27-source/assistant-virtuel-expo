@@ -1,8 +1,8 @@
 import type { BottomTabBarProps } from 'expo-router/tabs';
-import { Cards, House, MaskHappy, UserCircle, type Icon } from 'phosphor-react-native';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { Cards, House, MaskHappy, UserCircle, type Icon } from '@/components/icons';
 import { alpha, colors, fonts } from '@/theme/tokens';
 
 const ICONS: Record<string, Icon> = { home: House, scenes: MaskHappy, vocab: Cards, profil: UserCircle };

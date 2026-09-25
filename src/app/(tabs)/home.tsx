@@ -1,9 +1,9 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
-import { CaretRight, Cards, Fire, Phone } from 'phosphor-react-native';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { CoverImage } from '@/components/agent';
+import { CaretRight, Cards, Fire, Phone } from '@/components/icons';
 import { GoalRing, ProgressBar, Screen } from '@/components/layout';
 import { Card, Kicker, SectionTitle, T, Tag } from '@/components/ui';
 import { getLang } from '@/data/langs';

@@ -19,8 +19,9 @@ const theme = {
 
 function Root() {
   const { ready } = useStore();
-  const [fontsLoaded] = useFonts({ Inter_400Regular, Inter_500Medium });
-  const show = ready && fontsLoaded;
+  const [fontsLoaded, fontError] = useFonts({ Inter_400Regular, Inter_500Medium });
+  // Si la police ne se charge pas, on affiche quand même l'app (police système).
+  const show = ready && (fontsLoaded || !!fontError);
 
   useEffect(() => {
     if (show) SplashScreen.hideAsync().catch(() => {});
